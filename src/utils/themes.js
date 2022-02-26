@@ -3,8 +3,7 @@ const setUpTheme = (themeName) => {
   document.documentElement.className = themeName;
 };
 
-const changeTheme = () => {
-  const theme = localStorage.getItem("theme");
+const changeTheme = (theme) => {
   if (theme === "theme-light") {
     setUpTheme("theme-light");
   } else {

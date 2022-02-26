@@ -14,7 +14,7 @@ function SideBar() {
   // handle click
   const handleClick = () => {
     // change theme in localStorage and body class
-    changeTheme();
+    changeTheme(theme);
 
     //change theme in local state for icon
     setTheme(theme === "theme-light" ? "theme-dark" : "theme-light");
