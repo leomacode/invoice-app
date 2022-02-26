@@ -75,6 +75,22 @@ select {
   }
 }
 
+/* colors */
+:root {
+  --clr-sidebar: #373b53;
+  --clr-purple: #7c5dfa;
+  --clr-lg-purple: #9277ff;
+  --clr-line-grey: #494e6e;
+}
+
+.theme-light {
+  --clr-siderbar: #373b53;
+}
+
+.theme-dark {
+  --clr-sidebar: #1e2139;
+}
+
 /* typography */
 html {
   font-family: "Spartan", sans-serif;
