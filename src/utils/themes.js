@@ -4,11 +4,9 @@ const setUpTheme = (themeName) => {
 };
 
 const changeTheme = (theme) => {
-  if (theme === "theme-light") {
-    setUpTheme("theme-light");
-  } else {
-    setUpTheme("theme-dark");
-  }
+  theme === "theme-light"
+    ? setUpTheme("theme-light")
+    : setUpTheme("theme-dark");
 };
 
 export { setUpTheme, changeTheme };

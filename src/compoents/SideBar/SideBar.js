@@ -28,9 +28,9 @@ function SideBar() {
 
       <div className="sidebar-dark-mode-btn" onClick={handleClick}>
         {theme === "theme-dark" ? (
-          <img src={moon} alt="moon" />
-        ) : (
           <img src={sun} alt="sun" />
+        ) : (
+          <img src={moon} alt="moon" />
         )}
       </div>
 

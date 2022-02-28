@@ -81,14 +81,35 @@ select {
   --clr-purple: #7c5dfa;
   --clr-lg-purple: #9277ff;
   --clr-line-grey: #494e6e;
+  --clr-bg: #141625;
+  --clr-h1: #ffffff;
+  --clr-body-1: #dfe3fa;
+  --clr-h3-2: #ffffff;
+  --clr-shadow: #252945;
+  --clr-drop-down-bg: #252945;
+  --clr-checkmark: #1e2139;
 }
 
 .theme-light {
   --clr-siderbar: #373b53;
+  --clr-bg: #f8f8fb;
+  --clr-h1: #0c0e16;
+  --clr-body-1: #888eb0;
+  --clr-h3-2: #0c0e16;
+  --clr-shadow: (72, 84, 159);
+  --clr-drop-down-bg: #ffffff;
+  --clr-checkmark: #dfe3fa;
 }
 
 .theme-dark {
   --clr-sidebar: #1e2139;
+  --clr-bg: #141625;
+  --clr-h1: #ffffff;
+  --clr-body-1: #dfe3fa;
+  --clr-h3-2: #ffffff;
+  --clr-shadow: (0, 0, 0);
+  --clr-drop-down-bg: #252945;
+  --clr-checkmark: #1e2139;
 }
 
 /* typography */
@@ -99,14 +120,16 @@ html {
 
 .h1-text,
 .h2-text,
-.h3-text {
+.h3-text-1,
+.h3-text-2 {
   font-weight: bold;
 }
 
 .h1-text {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   line-height: 3.6rem;
   letter-spacing: -1;
+  color: var(--clr-h1);
 }
 
 .h2-text {
@@ -115,10 +138,17 @@ html {
   letter-spacing: -0.63;
 }
 
-.h3-text {
+.h3-text-1 {
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.25;
+}
+
+.h3-text-2 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.25;
+  color: var(--clr-h3-2);
 }
 
 .body-1-text,
@@ -130,10 +160,75 @@ html {
   font-size: 1.2rem;
   line-height: 1.5rem;
   letter-spacing: -0.25;
+  color: var(--clr-body-1);
 }
 
 .body-2-text {
   font-size: 1.1rem;
   line-height: 1.8rem;
   letter-spacing: -0.25;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@media (min-width: 560px) {
+  .h1-text {
+    font-size: 3.2rem;
+  }
+}
+
+/* Containers */
+@media (min-width: 720px) {
+  .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10.3rem;
+    height: 100%;
+    width: calc(100% - 10.3rem);
+  }
+}
+
+.container {
+  padding-top: 3.2rem;
+  padding-inline: 1.2rem;
+
+  margin: 0 auto;
+}
+
+@media (min-width: 560px) {
+  .container {
+    padding-top: 5.6rem;
+    padding-inline: 2.4rem;
+  }
+}
+@media (min-width: 720px) {
+  .container {
+    width: min(calc(100% - 4.8rem), 73rem);
+    margin: 0 auto;
+    padding-inline: 0;
+    padding-top: 7.2rem;
+  }
+}
+
+/* layout */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* button */
+.btn {
+  border: none;
+  padding: 1.5em 1.4em;
+  border-radius: 24px;
 }

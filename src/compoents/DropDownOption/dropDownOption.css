@@ -1,0 +1,54 @@
+.drop-down-option {
+  align-items: center;
+}
+
+.drop-down-option-checkbox {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.drop-down-option-label {
+  cursor: pointer;
+  gap: 1.3rem;
+  align-items: end;
+  position: relative;
+}
+
+.drop-down-option-label::before {
+  display: block;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--clr-checkmark);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.drop-down-option-label::after {
+  display: block;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--clr-purple);
+  background-image: url("../../assets/icon-check.svg");
+  background-size: 1rem 1rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.drop-down-option-label:hover ~ .drop-down-option-label::before,
+.drop-down-option-label:hover::before {
+  border: 1px solid var(--clr-purple);
+}
+
+.drop-down-option-checkbox:checked ~ .drop-down-option-label::after {
+  opacity: 1;
+}
