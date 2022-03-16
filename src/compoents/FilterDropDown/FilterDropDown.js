@@ -9,7 +9,11 @@ function FilterDropDown() {
 
   return (
     <div className="filter-drop-down flex">
-      <div className="filter-drop-down-menu flex">
+      <div
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className="filter-drop-down-menu flex"
+        data-visible={dropdownOpen}
+      >
         <span className="filter-drop-down-text h3-text-2 capitalize">
           {useTextTitle("filter", "filter by status")}
         </span>
@@ -20,11 +24,13 @@ function FilterDropDown() {
         />
       </div>
 
-      <div className="filter-drop-down-selection flex">
-        {dropDownOptions.map((option) => (
-          <DropDownOption key={option} name={option} />
-        ))}
-      </div>
+      {dropdownOpen && (
+        <div className="filter-drop-down-selection flex">
+          {dropDownOptions.map((option) => (
+            <DropDownOption key={option} name={option} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

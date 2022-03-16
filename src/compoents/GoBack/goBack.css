@@ -1,0 +1,11 @@
+.go-back-btn {
+  gap: 2.8rem;
+  align-items: center;
+  cursor: pointer;
+  height: 3.5rem;
+}
+
+.go-back-btn-text {
+  display: inline-block;
+  align-self: center;
+}

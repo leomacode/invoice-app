@@ -88,6 +88,10 @@ select {
   --clr-shadow: #252945;
   --clr-drop-down-bg: #252945;
   --clr-checkmark: #1e2139;
+  --clr-hashtag: #7e88c3;
+  --clr-paid: 51, 214, 159;
+  --clr-pending: 255, 143, 0;
+  --clr-draft: 55, 59, 83;
 }
 
 .theme-light {
@@ -96,7 +100,7 @@ select {
   --clr-h1: #0c0e16;
   --clr-body-1: #888eb0;
   --clr-h3-2: #0c0e16;
-  --clr-shadow: (72, 84, 159);
+  --clr-shadow: 72, 84, 159;
   --clr-drop-down-bg: #ffffff;
   --clr-checkmark: #dfe3fa;
 }
@@ -146,7 +150,7 @@ html {
 
 .h3-text-2 {
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   letter-spacing: -0.25;
   color: var(--clr-h3-2);
 }
@@ -231,4 +235,32 @@ html {
   border: none;
   padding: 1.5em 1.4em;
   border-radius: 24px;
+}
+
+/* status */
+.paid {
+  background: rgba(var(--clr-paid), 0.06);
+  color: rgb(var(--clr-paid));
+}
+
+.itemIndicator-status-paid {
+  background: rgb(var(--clr-paid));
+}
+
+.pending {
+  background: rgba(var(--clr-pending), 0.06);
+  color: rgb(var(--clr-pending));
+}
+
+.itemIndicator-status-pending {
+  background: rgb(var(--clr-pending));
+}
+
+.draft {
+  background: rgba(var(--clr-draft), 0.06);
+  color: rgb(var(--clr-draft));
+}
+
+.itemIndicator-status-draft {
+  background: rgb(var(--clr-draft));
 }

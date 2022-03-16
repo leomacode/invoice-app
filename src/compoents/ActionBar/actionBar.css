@@ -6,30 +6,6 @@
   margin-bottom: 0.4rem;
 }
 
-.action-bar-btn {
-  align-items: center;
-  gap: 0.8rem;
-  padding: 0.6em;
-  background: var(--clr-purple);
-  cursor: pointer;
-  transition: background 300ms ease-in-out;
-}
-
-.action-bar-btn:hover {
-  background: var(--clr-lg-purple);
-}
-
-.action-bar-btn-img {
-  padding: 1.1em;
-  background: #fff;
-  border-radius: 50%;
-}
-
-.action-bar-btn-text {
-  padding-right: 1.4em;
-  color: #fff;
-}
-
 @media (min-width: 560px) {
   .action-bar-title-text {
     margin-bottom: 0.8rem;

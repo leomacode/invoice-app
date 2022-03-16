@@ -10,11 +10,17 @@
   gap: 1.2rem;
   display: flex;
   align-self: center;
+  cursor: pointer;
 }
 
 .filter-drop-down-icon {
   width: 8.46px;
   object-fit: contain;
+  transition: transform 300ms ease-in-out;
+}
+
+.filter-drop-down-menu[data-visible="true"] > .filter-drop-down-icon {
+  transform: rotate(-180deg);
 }
 
 .filter-drop-down-selection {

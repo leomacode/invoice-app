@@ -1,0 +1,48 @@
+.new-invoice {
+  position: absolute;
+  top: 7.2rem;
+  left: 0;
+  background: var(--clr-bg);
+  height: calc(100% - 7.2rem);
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+.new-invoice[data-visible="true"] {
+  transform: translateX(0);
+}
+@media (min-width: 560px) {
+  .new-invoice {
+    top: 8rem;
+    max-width: 61.6rem;
+    border-radius: 0 20px 20px 0;
+    z-index: 1;
+  }
+
+  .new-invoice-overlay[data-visible="true"] {
+    position: absolute;
+    left: 0;
+    top: 8rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: calc(100% - 8rem);
+  }
+}
+
+@media (min-width: 720px) {
+  .new-invoice {
+    top: 0;
+    left: -2rem;
+    height: 100%;
+    max-width: 71.9rem;
+  }
+
+  .new-invoice-overlay[data-visible="true"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -2,9 +2,7 @@ import React from "react";
 import "./dropDownOption.css";
 
 function DropDownOption({ name }) {
-  const handleClick = (e) => {
-    console.log(e.target.checked);
-  };
+  const handleClick = (e) => {};
 
   return (
     <div className="drop-down-option flex">
