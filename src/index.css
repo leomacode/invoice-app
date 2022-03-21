@@ -39,6 +39,10 @@ body {
   line-height: 1.5;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -84,6 +88,7 @@ select {
   --clr-bg: #141625;
   --clr-h1: #ffffff;
   --clr-body-1: #dfe3fa;
+  --clr-h3-1: #ffffff;
   --clr-h3-2: #ffffff;
   --clr-shadow: #252945;
   --clr-drop-down-bg: #252945;
@@ -92,6 +97,7 @@ select {
   --clr-paid: 51, 214, 159;
   --clr-pending: 255, 143, 0;
   --clr-draft: 55, 59, 83;
+  --clr-invoice-bg: #1e2139;
 }
 
 .theme-light {
@@ -99,10 +105,12 @@ select {
   --clr-bg: #f8f8fb;
   --clr-h1: #0c0e16;
   --clr-body-1: #888eb0;
+  --clr-h3-1: #0c0e16;
   --clr-h3-2: #0c0e16;
   --clr-shadow: 72, 84, 159;
   --clr-drop-down-bg: #ffffff;
   --clr-checkmark: #dfe3fa;
+  --clr-invoice-bg: #ffffff;
 }
 
 .theme-dark {
@@ -110,10 +118,12 @@ select {
   --clr-bg: #141625;
   --clr-h1: #ffffff;
   --clr-body-1: #dfe3fa;
+  --clr-h3-1: #ffffff;
   --clr-h3-2: #ffffff;
   --clr-shadow: (0, 0, 0);
   --clr-drop-down-bg: #252945;
   --clr-checkmark: #1e2139;
+  --clr-invoice-bg: #1e2139;
 }
 
 /* typography */
@@ -146,6 +156,7 @@ html {
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.25;
+  color: var(--clr-h3-1);
 }
 
 .h3-text-2 {
@@ -188,30 +199,44 @@ html {
 }
 
 /* Containers */
+
+@media (min-width: 720px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10.3rem;
+    height: 100%;
+    background: var(--clr-bg);
+  }
+}
+
+.main {
+  background: var(--clr-bg);
+}
+
 @media (min-width: 720px) {
   .main {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 10.3rem;
-    height: 100%;
     width: calc(100% - 10.3rem);
   }
 }
 
 .container {
   padding-top: 3.2rem;
-  padding-inline: 1.2rem;
-
+  padding-inline: 2.4rem;
   margin: 0 auto;
 }
 
 @media (min-width: 560px) {
   .container {
     padding-top: 5.6rem;
-    padding-inline: 2.4rem;
   }
 }
+
 @media (min-width: 720px) {
   .container {
     width: min(calc(100% - 4.8rem), 73rem);

@@ -1,6 +1,5 @@
 .sidebar {
   height: 7.2rem;
-  width: 100vw;
   background: var(--clr-sidebar);
   display: flex;
   align-items: center;
@@ -73,7 +72,8 @@
 
 @media (min-width: 720px) {
   .sidebar {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     bottom: 0;

@@ -1,19 +1,27 @@
+.invoices {
+  padding-bottom: 10.5rem;
+}
 .invoice-items-cantainer {
   margin-top: 3.2rem;
-  margin-bottom: 10.5rem;
   flex-direction: column;
   gap: 1.6rem;
 }
 
 @media (min-width: 560px) {
+  .invoices {
+    padding-bottom: 17.3rem;
+  }
   .invoice-items-cantainer {
     margin-top: 5.6rem;
-    margin-bottom: 17.3rem;
   }
 }
+
 @media (min-width: 720px) {
+  .invoices {
+    padding-bottom: 26.8rem;
+  }
+
   .invoice-items-cantainer {
     margin-top: 6.5rem;
-    margin-bottom: 26.8rem;
   }
 }
