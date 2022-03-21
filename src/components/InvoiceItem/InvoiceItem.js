@@ -1,11 +1,12 @@
 import React from "react";
 import moment from "moment";
+import { Link } from "react-router-dom";
 import { arrowRight } from "../../assets";
 
 import "./invoiceItem.css";
 function InvoiceItem({ id, paymentDue, total, clientName, status }) {
   return (
-    <div className="invoice-item grid">
+    <Link to={`/invoices/${id}`} className="invoice-item grid">
       <div className="invoice-item-id h3-text-2">
         <span className="invoice-item-id-hashtag">#</span>
         {id}
@@ -29,7 +30,7 @@ function InvoiceItem({ id, paymentDue, total, clientName, status }) {
       </div>
 
       <img className="invoice-item-arrow" src={arrowRight} alt="arrow-right" />
-    </div>
+    </Link>
   );
 }
 

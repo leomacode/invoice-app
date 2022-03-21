@@ -1,6 +1,6 @@
 import React from "react";
 import "./actionBar.css";
-import { FilterDropDown, AddNewButton } from "../";
+import { FilterDropDown, AddNewButton } from "..";
 import useStore from "../../store";
 
 function ActionBar() {

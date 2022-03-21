@@ -1,6 +1,6 @@
 import React from "react";
 import "./invoices.css";
-import { ActionBar, InvoiceItem } from "../../compoents";
+import { ActionBar, InvoiceItem } from "../../components";
 import useStore from "../../store";
 
 function Invoices() {
