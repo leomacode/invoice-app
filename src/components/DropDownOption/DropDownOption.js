@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./dropDownOption.css";
-
+import { SearchTermsContext } from "../../Contexts";
 function DropDownOption({ name }) {
-  const handleClick = (e) => {};
+  const { terms, setTerms } = useContext(SearchTermsContext);
+
+  const handleClick = () => {
+    let searchTerms = terms;
+    if (searchTerms.includes(name)) {
+      searchTerms = searchTerms.filter((term) => !(term === name));
+    } else {
+      searchTerms.push(name);
+      searchTerms = [...searchTerms];
+    }
+    setTerms(searchTerms);
+  };
 
   return (
     <div className="drop-down-option flex">

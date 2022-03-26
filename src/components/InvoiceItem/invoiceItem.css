@@ -9,6 +9,13 @@
     "invoice-item-payment-due invoice-item-status"
     "invoice-item-total invoice-item-status";
 }
+
+.invoice-item,
+.invoice-item:active,
+.invoice-item:visited {
+  text-decoration: none;
+}
+
 .invoice-item-id {
   grid-area: invoice-item-id;
   /* first column gap */
@@ -104,8 +111,5 @@
   .invoice-item:hover {
     border: 1px solid var(--clr-purple);
     cursor: pointer;
-  }
-  .invoice-item:active {
-    text-decoration: none;
   }
 }

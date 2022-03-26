@@ -214,6 +214,7 @@ html {
 
 .main {
   background: var(--clr-bg);
+  min-height: 100vh;
 }
 
 @media (min-width: 720px) {
