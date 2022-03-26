@@ -1,0 +1,27 @@
+.no-invoice {
+  width: 21.7rem;
+  text-align: center;
+  margin-top: 10rem;
+  margin-inline: auto;
+}
+
+.no-invoice-title {
+  margin-top: 4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 560px) {
+  .no-invoice {
+    width: 24.2rem;
+    margin-top: 21rem;
+  }
+
+  .no-invoice-title {
+    margin-top: 6.4rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .no-invoice {
+    margin-top: 14rem;
+  }
+}

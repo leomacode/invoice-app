@@ -6,3 +6,4 @@ export { default as plus } from "./icon-plus.svg";
 export { default as arrowDown } from "./icon-arrow-down.svg";
 export { default as arrowLeft } from "./icon-arrow-left.svg";
 export { default as arrowRight } from "./icon-arrow-right.svg";
+export { default as noInvoice } from "./illustration-empty.svg";

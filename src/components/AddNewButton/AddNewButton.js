@@ -4,12 +4,15 @@ import { useTextTitle } from "../../hooks";
 import { plus } from "../../assets";
 import { NewInvoice } from "..";
 
-function AddNewButton() {
+function AddNewButton({ setDropdownOpen }) {
   const [addNew, setAddNew] = useState(false);
   return (
     <>
       <button
-        onClick={() => setAddNew(!addNew)}
+        onClick={() => {
+          setAddNew(!addNew);
+          setDropdownOpen(false);
+        }}
         data-add={addNew}
         className="action-bar-btn btn flex"
       >

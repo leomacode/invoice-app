@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./invoices.css";
-import { ActionBar, InvoiceItem } from "../../components";
+import { ActionBar, InvoiceItem, NoInvoice } from "../../components";
 import useStore from "../../store";
 import { SearchTermsContext } from "../../Contexts";
 
@@ -10,12 +10,15 @@ function Invoices() {
   const [terms, setTerms] = useState([]);
 
   useEffect(() => {
+    let items = [...invoices];
+    items = [];
     if (terms.length) {
-      const items = invoices.filter(({ status }) => terms.includes(status));
+      items = items.filter(({ status }) => terms.includes(status));
       setDisplayItems(items);
     } else {
-      setDisplayItems(invoices);
+      setDisplayItems(items);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [terms]);
 
   return (
@@ -24,16 +27,20 @@ function Invoices() {
         <ActionBar invoices={invoices} />
       </SearchTermsContext.Provider>
       <div className="invoice-items-cantainer flex">
-        {displayItems.map(({ id, paymentDue, total, clientName, status }) => (
-          <InvoiceItem
-            key={id}
-            id={id}
-            paymentDue={paymentDue}
-            total={total}
-            clientName={clientName}
-            status={status}
-          />
-        ))}
+        {terms.length ? (
+          displayItems.map(({ id, paymentDue, total, clientName, status }) => (
+            <InvoiceItem
+              key={id}
+              id={id}
+              paymentDue={paymentDue}
+              total={total}
+              clientName={clientName}
+              status={status}
+            />
+          ))
+        ) : (
+          <NoInvoice />
+        )}
       </div>
     </div>
   );

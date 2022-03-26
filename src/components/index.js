@@ -7,3 +7,4 @@ export { default as NewInvoice } from "./NewInvoice/NewInvoice";
 export { default as GoBack } from "./GoBack/GoBack";
 export { default as InvoiceItem } from "./InvoiceItem/InvoiceItem";
 export { default as InvoiceDetails } from "./InvoiceDetails/InvoiceDetails";
+export { default as NoInvoice } from "./NoInvoice/NoInvoice";

@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { DropDownOption } from "..";
 import { useTextTitle } from "../../hooks";
 import { arrowDown } from "../../assets";
 import "./filterDropDown.css";
 const dropDownOptions = ["draft", "pending", "paid"];
-function FilterDropDown() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
+function FilterDropDown({ dropdownOpen, setDropdownOpen }) {
   return (
     <div className="filter-drop-down flex">
       <div

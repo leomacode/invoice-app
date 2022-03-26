@@ -86,10 +86,8 @@ select {
   --clr-lg-purple: #9277ff;
   --clr-line-grey: #494e6e;
   --clr-bg: #141625;
-  --clr-h1: #ffffff;
+  --clr-text-dark: #ffffff;
   --clr-body-1: #dfe3fa;
-  --clr-h3-1: #ffffff;
-  --clr-h3-2: #ffffff;
   --clr-shadow: #252945;
   --clr-drop-down-bg: #252945;
   --clr-checkmark: #1e2139;
@@ -103,10 +101,8 @@ select {
 .theme-light {
   --clr-siderbar: #373b53;
   --clr-bg: #f8f8fb;
-  --clr-h1: #0c0e16;
+  --clr-text-dark: #0c0e16;
   --clr-body-1: #888eb0;
-  --clr-h3-1: #0c0e16;
-  --clr-h3-2: #0c0e16;
   --clr-shadow: 72, 84, 159;
   --clr-drop-down-bg: #ffffff;
   --clr-checkmark: #dfe3fa;
@@ -137,13 +133,13 @@ html {
 .h3-text-1,
 .h3-text-2 {
   font-weight: bold;
+  color: var(--clr-text-dark);
 }
 
 .h1-text {
   font-size: 2.2rem;
   line-height: 3.6rem;
   letter-spacing: -1;
-  color: var(--clr-h1);
 }
 
 .h2-text {
@@ -156,14 +152,12 @@ html {
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: -0.25;
-  color: var(--clr-h3-1);
 }
 
 .h3-text-2 {
   font-size: 1.2rem;
   line-height: 1.5rem;
   letter-spacing: -0.25;
-  color: var(--clr-h3-2);
 }
 
 .body-1-text,
