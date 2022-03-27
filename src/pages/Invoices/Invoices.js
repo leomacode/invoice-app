@@ -11,7 +11,6 @@ function Invoices() {
 
   useEffect(() => {
     let items = [...invoices];
-    items = [];
     if (terms.length) {
       items = items.filter(({ status }) => terms.includes(status));
       setDisplayItems(items);
@@ -27,7 +26,7 @@ function Invoices() {
         <ActionBar invoices={invoices} />
       </SearchTermsContext.Provider>
       <div className="invoice-items-cantainer flex">
-        {terms.length ? (
+        {invoices.length ? (
           displayItems.map(({ id, paymentDue, total, clientName, status }) => (
             <InvoiceItem
               key={id}

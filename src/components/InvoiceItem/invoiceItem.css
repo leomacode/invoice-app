@@ -26,8 +26,8 @@
   color: var(--clr-hashtag);
 }
 
-.invoice-item-name,
-.invoice-item-status {
+.invoice-status-container,
+.invoice-item-name {
   justify-self: end;
 }
 
@@ -43,23 +43,8 @@
   grid-area: invoice-item-total;
 }
 
-.invoice-item-status {
+.invoice-status-container {
   grid-area: invoice-item-status;
-}
-
-.invoice-item-status {
-  gap: 0.8rem;
-  align-items: center;
-  justify-content: center;
-  padding: 1.3rem 1.8rem;
-  width: 10.4rem;
-  border-radius: 0.6rem;
-}
-
-.invoice-status-indicator {
-  height: 0.8rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
 }
 
 .invoice-item-arrow {
@@ -97,7 +82,7 @@
     justify-self: end;
   }
 
-  .invoice-item-status {
+  .invoice-status-container {
     margin-left: 4rem;
   }
 

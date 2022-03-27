@@ -83,6 +83,7 @@ select {
 :root {
   --clr-sidebar: #373b53;
   --clr-purple: #7c5dfa;
+  --clr-white: #fff;
   --clr-lg-purple: #9277ff;
   --clr-line-grey: #494e6e;
   --clr-bg: #141625;
@@ -96,6 +97,8 @@ select {
   --clr-pending: 255, 143, 0;
   --clr-draft: 55, 59, 83;
   --clr-invoice-bg: #1e2139;
+  --clr-mark-as-paid: #7c5dfa;
+  --clr-mark-as-paid-hover: #9277ff;
 }
 
 .theme-light {

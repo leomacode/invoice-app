@@ -6,5 +6,7 @@ export { default as AddNewButton } from "./AddNewButton/AddNewButton";
 export { default as NewInvoice } from "./NewInvoice/NewInvoice";
 export { default as GoBack } from "./GoBack/GoBack";
 export { default as InvoiceItem } from "./InvoiceItem/InvoiceItem";
+export { default as InvoiceItemStatus } from "./InvoiceItemStatus/InvoiceItemStatus";
 export { default as InvoiceDetails } from "./InvoiceDetails/InvoiceDetails";
 export { default as NoInvoice } from "./NoInvoice/NoInvoice";
+export { default as Button } from "./Button/Button";
