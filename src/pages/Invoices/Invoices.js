@@ -27,16 +27,32 @@ function Invoices() {
       </SearchTermsContext.Provider>
       <div className="invoice-items-cantainer flex">
         {invoices.length ? (
-          displayItems.map(({ id, paymentDue, total, clientName, status }) => (
-            <InvoiceItem
-              key={id}
-              id={id}
-              paymentDue={paymentDue}
-              total={total}
-              clientName={clientName}
-              status={status}
-            />
-          ))
+          displayItems.map(
+            ({
+              id,
+              paymentDue,
+              total,
+              clientName,
+              status,
+              senderAddress,
+              clientAddress,
+              description,
+              clientEmail,
+            }) => (
+              <InvoiceItem
+                key={id}
+                id={id}
+                paymentDue={paymentDue}
+                total={total}
+                clientName={clientName}
+                status={status}
+                senderAddress={senderAddress}
+                clientAddress={clientAddress}
+                description={description}
+                clientEmail={clientEmail}
+              />
+            )
+          )
         ) : (
           <NoInvoice />
         )}

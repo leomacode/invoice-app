@@ -5,7 +5,20 @@ import "./invoiceDetails.css";
 function InvoiceDetails() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { id, paymentDue, total, clientName, status } = location.state;
+  const {
+    id,
+    paymentDue,
+    total,
+    clientName,
+    status,
+    senderAddress,
+    clientAddress,
+    description,
+    clientEmail,
+  } = location.state;
+
+  const { senderStreet, senderCity, senderCountry } = senderAddress;
+  console.log(senderAddress);
   return (
     <div className="invoice-details container">
       <GoBack handleInvoice={() => navigate(-1)} />
@@ -23,7 +36,21 @@ function InvoiceDetails() {
         </div>
       </div>
 
-      <div className="invoice-details-info"></div>
+      <div className="invoice-details-info">
+        <div className="invoiceDetails-info-header">
+          <div className="invoiceDetails-info-idDes">
+            <div className="invoiceDetails-info-id h3-text-1">
+              <span className="invoiceDetails-info-hash">#</span>
+              {id}
+            </div>
+            <div className="invoiceDetails-info-description h3-text-2">
+              {description}
+            </div>
+          </div>
+
+          <div className="invoiceDetails-info-senderAddress"></div>
+        </div>
+      </div>
     </div>
   );
 }

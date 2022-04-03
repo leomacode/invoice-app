@@ -5,8 +5,28 @@ import { arrowRight } from "../../assets";
 import { InvoiceItemStatus } from "..";
 import "./invoiceItem.css";
 
-function InvoiceItem({ id, paymentDue, total, clientName, status }) {
-  const invoiceData = { id, paymentDue, total, clientName, status };
+function InvoiceItem({
+  id,
+  paymentDue,
+  total,
+  clientName,
+  status,
+  senderAddress,
+  clientAddress,
+  description,
+  clientEmail,
+}) {
+  const invoiceData = {
+    id,
+    paymentDue,
+    total,
+    clientName,
+    status,
+    senderAddress,
+    clientAddress,
+    description,
+    clientEmail,
+  };
   return (
     <Link
       to={`/invoices/${id}`}

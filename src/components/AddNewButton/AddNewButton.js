@@ -14,7 +14,7 @@ function AddNewButton({ setDropdownOpen }) {
           setDropdownOpen(false);
         }}
         data-add={addNew}
-        className="action-bar-btn btn flex"
+        className="action-bar-btn btn-1 flex"
       >
         <img className="action-bar-btn-img" src={plus} alt="btn plus" />
         <p className="action-bar-btn-text body-1-text capitalize">

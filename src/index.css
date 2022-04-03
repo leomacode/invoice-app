@@ -99,6 +99,11 @@ select {
   --clr-invoice-bg: #1e2139;
   --clr-mark-as-paid: #7c5dfa;
   --clr-mark-as-paid-hover: #9277ff;
+  --clr-delete: #ec5757;
+  --clr-delete-hover: #ff9797;
+  --clr-edit-text: #7e88c3;
+  --clr-edit: #f9fafe;
+  --clr-invoiceId-hash: #888eb0;
 }
 
 .theme-light {
@@ -110,6 +115,7 @@ select {
   --clr-drop-down-bg: #ffffff;
   --clr-checkmark: #dfe3fa;
   --clr-invoice-bg: #ffffff;
+  --clr-edit: #f9fafe;
 }
 
 .theme-dark {
@@ -123,6 +129,7 @@ select {
   --clr-drop-down-bg: #252945;
   --clr-checkmark: #1e2139;
   --clr-invoice-bg: #1e2139;
+  --clr-edit: #252945;
 }
 
 /* typography */
@@ -142,25 +149,21 @@ html {
 .h1-text {
   font-size: 2.2rem;
   line-height: 3.6rem;
-  letter-spacing: -1;
 }
 
 .h2-text {
   font-size: 2rem;
   line-height: 2.2rem;
-  letter-spacing: -0.63;
 }
 
 .h3-text-1 {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  letter-spacing: -0.25;
 }
 
 .h3-text-2 {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  letter-spacing: -0.25;
 }
 
 .body-1-text,
@@ -171,14 +174,13 @@ html {
 .body-1-text {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  letter-spacing: -0.25;
+
   color: var(--clr-body-1);
 }
 
 .body-2-text {
   font-size: 1.1rem;
   line-height: 1.8rem;
-  letter-spacing: -0.25;
 }
 
 .capitalize {
@@ -254,10 +256,22 @@ html {
 }
 
 /* button */
-.btn {
+.btn-1,
+.btn-2 {
   border: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-1 {
   padding: 1.5em 1.4em;
   border-radius: 24px;
+}
+
+.btn-2 {
+  padding: 1.6rem 2.4rem;
+  border-radius: 2.4rem;
+  font-weight: 700;
 }
 
 /* status */
